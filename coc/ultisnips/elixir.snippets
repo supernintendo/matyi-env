@@ -1,0 +1,124 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+global !p
+def first_chunk(name):
+	name.split()[0]
+
+endglobal
+
+snippet def "defines a new function with a multiline block" !b
+def ${1:name}(${2:params}) do
+  $0
+end
+endsnippet
+
+snippet defl "defines a new function" !b
+def ${1:name}(${2:params}), do: $0
+endsnippet
+
+snippet defp "defines a private method with a multiline block" !b
+defp ${1:name}(${2:params}) do
+  $0
+end
+endsnippet
+
+snippet defc "defines a behavior callback" !b
+defcallback ${1:name}(${0:params})
+endsnippet
+
+snippet defm "defines a macro" !b
+defmacro ${1:name}(${2:params}) do
+  $0
+end
+endsnippet
+
+snippet qt "define a quote block" !b
+quote do
+  $0
+end
+endsnippet
+
+snippet qtl "defines a quote block inline" !b
+quote do: $0
+endsnippet
+
+snippet mod "defines a new module" !b
+defmodule ${1:name} do
+  $0
+end
+endsnippet
+
+snippet test "add a test case" !b
+test "${1:description}" do
+  $0
+end
+endsnippet
+
+snippet if "add an if block" !b
+if ${1:condition} do
+  $0
+end
+endsnippet
+
+snippet ife "add an if-else block" !b
+if ${1:condition} do
+  $2
+else
+  $0
+end
+endsnippet
+
+snippet insp "inspect an expression result" !b
+IO.puts """
+#############################
+#{inspect $0}
+#############################
+"""
+endsnippet
+
+snippet fn "insert an anonymous function" !i
+fn(${1:args}) -> ${0} end
+endsnippet
+
+snippet doc "insert a function documentation block" !b
+@doc """
+${0}
+"""
+endsnippet
+
+snippet mdoc "insert a module documentation block" !b
+@moduledoc """
+${0}
+"""
+endsnippet
+
+snippet using "insert using macro" !b
+defmacro __using__(opts) do
+  $0
+end
+endsnippet
+

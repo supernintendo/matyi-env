@@ -1,0 +1,17 @@
+# cmus
+/cmus/cache
+/cmus/command-history
+/cmus/lib.pl
+/cmub/playlists
+/cmus/search-history
+
+# coc
+/coc/list-snippets-history.json
+/coc/extensions/node_modules
+/coc/mru
+
+# nvim
+/nvim/plugged
+
+# tmux
+/tmux/plugins
