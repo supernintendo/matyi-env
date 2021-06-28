@@ -1,0 +1,20 @@
+### Display configuration
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font $font $fontSize
+
+# Change titlebar / tabbar colors
+client.focused          $colorChrome $colorChrome $colorAccent
+client.focused_inactive $transparent $transparent $transparent
+client.unfocused        $transparent $transparent $transparent
+client.urgent           $colorChrome $colorChrome $colorUrgent
+
+# Add spacing between windows
+for_window [class="^.*"] border pixel $borderSize
+gaps inner $innerGap
+gaps outer $outerGap
+gaps top $yGap
+gaps left $xGap
+gaps right $xGap
+gaps bottom $yGap

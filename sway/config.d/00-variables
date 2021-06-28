@@ -1,0 +1,58 @@
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Your preferred terminal emulator
+set $term alacritty
+
+# How long in seconds before idling the screen
+set $idleSeconds 300
+
+## Theme
+
+# Wallpaper
+set $wallpaper '~/Pictures/wallpapers/Akame ga Kill.png'
+
+# Colors
+set $transparent #00000000
+
+set $colorChrome #312f2fff
+set $colorAccent #95c5acff
+set $colorDark #0b0b0bdb
+set $colorText #fbfbfbff
+set $colorUrgent #ef3a0cff
+
+# Typography
+set $font Fantasque Sans Mono
+set $fontSize 12
+
+# Windows
+set $borderSize 0
+set $xGap 48
+set $yGap 24
+set $innerGap 64
+set $outerGap 128
+
+# Panels
+# TODO: Auto-align bemenu to panel
+set $panelPosition top
+
+# Time
+set $timeFormat %l:%M:%S%P
+set $timeFormatTruncated %l:%M%P
+set $dateFormat %A, %B %d
+set $dateFormatTruncated %a, %b %d
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu j4-dmenu-desktop --dmenu='bemenu -i -n --nf "$colorText" --tf "$colorText" --hf "$colorAccent" --scf "$colorAccent" --nb "$colorDark" --fn "$font $fontSize" -H 28 -l 8 --scrollbar autohide' --term='$term'
+
+set $lock "swaylock -f --key-hl-color=$colorAccent --font='$font' --timestr='$timeFormatTruncated' --datestr='$dateFormatTruncated'"

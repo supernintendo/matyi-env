@@ -1,0 +1,7 @@
+### Idle configuration
+
+# Lock screen after n seconds and lock screen before sleep
+exec swayidle -w timeout $idleSeconds $lock before-sleep $lock
+
+# Disable idle while viewing fullscreen content
+for_window [app_id="firefox"] inhibit_idle fullscreen

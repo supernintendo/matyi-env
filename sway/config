@@ -1,0 +1,5 @@
+# Mod+Space - Open wofi (a program launcher)
+# bindsym $mod+space exec --no-startup-id wofi --show run
+
+include ./config.d/*
+include @sysconfdir@/sway/config.d/*

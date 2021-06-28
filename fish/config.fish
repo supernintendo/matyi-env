@@ -1,7 +1,10 @@
 set fish_greeting
 set theme_color_scheme dark
-source ~/.asdf/asdf.fish
 
-alias ssh-hh-ci="ssh -i ~/.ssh/id_rsa.hh.ci.hhadmin hhadmin@git.househappy.com"
-alias ssh-hh-prod="ssh -i ~/.ssh/id_rsa.hh.template.hhadmin hhadmin@househappy.com"
-alias ssh-hh-prod-db="ssh -i ~/.ssh/id_rsa.hh.prod root@167.99.111.129"
+set -g theme_display_group no
+set -g theme_color_prompt brblack
+set -g theme_prompt_char_normal ' π '
+
+set -g -x MOZ_ENABLE_WAYLAND 1
+
+source /opt/asdf-vm/asdf.fish

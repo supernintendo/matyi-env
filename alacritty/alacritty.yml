@@ -58,7 +58,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: full
+  decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -93,7 +93,7 @@ window:
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  #history: 10000
+  history: 0
 
   # Scrolling distance multiplier.
   #multiplier: 3
@@ -101,14 +101,14 @@ window:
 # Font configuration
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: monospace
+    family: FantasqueSansMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -147,21 +147,21 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 10.0
+  size: 12
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
-  #offset:
-  #  x: 0
-  #  y: 0
+  offset:
+    x: -1
+    y: 2
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
   # right, increasing `y` moves the glyph upward.
   #glyph_offset:
-  #  x: 0
-  #  y: 0
+    #x: 0
+    #y: 0
 
   # Thin stroke font rendering (macOS only)
   #
@@ -176,7 +176,8 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#11100f'
+    background: '#262626'
+    # background: '#11100f'
   #  foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
@@ -326,7 +327,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.85
+background_opacity: 0.975
 
 #selection:
   # This string contains all characters that are used as separators for
